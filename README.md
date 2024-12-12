@@ -2,7 +2,7 @@
 
 ## Test Overview
 **Objective:** Evaluate the performance and stability of the stock derby betting platform under concurrent user load
-p
+
 ## Test Configuration
 - **Number of Concurrent Users (VUs):** 500
 - **Test Duration:** 1 second
@@ -33,10 +33,13 @@ The load test simulates a typical user interaction with the betting platform, co
 
 ### Request Performance
 
+
+### Request Performance
 | Metric | Average | Minimum | Median | Maximum |
-|--------|---------|---------|--------|---------|
-| HTTP Request Duration | 1.41s | 176.92ms | 704.77ms | 6.01s |
-| Iteration Duration | 6.48s | 3.4s | 6.54s | 9.16s |
+|--------|---------|---------|--------|---------| 
+| Iteration Duration (500 Users) | 6.48s | 3.4s | 6.54s | 9.16s |
+| Iteration Duration (100 Users) | 4.22s | 3.48s | 4.22s | 4.72s |
+
 
 ### Throughput Metrics
 
@@ -62,6 +65,12 @@ The load test simulates a typical user interaction with the betting platform, co
 
 ## Grafana K6 result
 
-![report Image](./images/image.png)
+### for 100 concurrent users
+![report Image](./images/image-100.png)
+
+### for 500 concurrent users
+![report Image](./images/image-500.png)
+
+
 ## Conclusion
-The betting platform demonstrated stability under 500 concurrent users, with all transactions successfully processed. However, variable response times suggest potential areas for performance optimization.
+The betting platform demonstrated stability under 500 concurrent users, with all transactions successfully processed. 
